@@ -7,6 +7,7 @@ Name:		python-%{short_name}
 Version:	0.6.6
 Release:	1
 License:	Python
+Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -15,7 +16,6 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
-Vendor:		XML-SIG <xml-sig@python.org>
 Source0:	http://prdownloads.sourceforge.net/pyxml/%{short_name}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 %requires_eq	python
@@ -90,7 +90,11 @@ CFLAGS="%{rpmcflags}" python setup.py build --with-libexpat=%{_prefix} --ldflags
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
-python setup.py install --root=$RPM_BUILD_ROOT --record=INSTALLED_FILES
+
+python setup.py install \
+	--root=$RPM_BUILD_ROOT \
+	--record=INSTALLED_FILES
+
 cp -a demo $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
 
 gzip -9fn ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
@@ -100,8 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {ANNOUNCE,CREDITS,LICENCE,README,README.dom,README.pyexpat,README.sgmlop}.gz doc test
-
+%doc *.gz doc test
 %{py_sitedir}/_xmlplus
 %attr(755,root,root) %{_bindir}/*
 
