@@ -1,4 +1,4 @@
-%include /usr/lib/rpm/macros.python
+%include	/usr/lib/rpm/macros.python
 
 %define module PyXML
 
@@ -14,6 +14,7 @@ Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel
 BuildRequires:	rpm-pythonprov
+BuildRequires:	python >= 2.2.1
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
