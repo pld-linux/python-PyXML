@@ -10,14 +10,6 @@ Release:	2
 License:	Python
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Development/Libraries
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	python >= 2.2
@@ -65,14 +57,6 @@ Zawiera miЙdzy innymi:
 Summary:	Examples of Python/XML
 Summary(pl):	PrzykЁady do Python/XML
 Group:		Development/Libraries
-Group(de):	Entwicklung/Bibliotheken
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(pt):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 %requires_eq	python
 Requires:	%{name} = %{version}
 
