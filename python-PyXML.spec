@@ -14,7 +14,6 @@ Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1:1.95.8
 BuildRequires:	python >= 2.2.1
-BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	expat >= 1:1.95.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
