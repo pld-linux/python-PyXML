@@ -6,10 +6,10 @@ Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.7
-Release:	3
+Release:	4
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
-Group:		Development/Languages/Python
+Group:		Libraries/Python
 Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel
@@ -55,7 +55,7 @@ Zawiera miêdzy innymi:
 %package examples
 Summary:	Examples of Python/XML
 Summary(pl):	Przyk³ady do Python/XML
-Group:		Development/Libraries
+Group:		Development/Languages/Python
 %requires_eq	python
 Requires:	%{name} = %{version}
 
