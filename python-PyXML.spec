@@ -1,6 +1,6 @@
 %include	/usr/lib/rpm/macros.python
 
-%define module PyXML
+%define	module	PyXML
 
 Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
