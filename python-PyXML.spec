@@ -5,7 +5,7 @@
 Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
-Version:	0.6.6
+Version:	0.7
 Release:	2
 License:	Python
 Vendor:		XML-SIG <xml-sig@python.org>
