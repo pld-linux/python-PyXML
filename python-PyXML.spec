@@ -5,7 +5,7 @@ Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
-Release:	2
+Release:	3
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
@@ -16,6 +16,7 @@ BuildRequires:	expat-devel >= 1:1.95.8
 BuildRequires:	python >= 2.2.1
 BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
+Requires:	expat >= 1:1.95.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
