@@ -10,11 +10,12 @@ Release:	2
 License:	Python
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
@@ -47,28 +48,29 @@ Python. It contains, among other things
 Pakiet PyXML jest zestawem bibliotek do obs³ugi XML z poziomu Pythona.
 Zawiera miêdzy innymi:
  - xmlproc: parser sprawdzaj±cy poprawno¶æ XML
- - sgmlp: pomocniczy modu³ w C przyspieszaj±cy dzia³anie xmllib.py
-   i sgmllib.py piêciokrotnie
+ - sgmlp: pomocniczy modu³ w C przyspieszaj±cy dzia³anie xmllib.py i
+   sgmllib.py piêciokrotnie
  - PySAX: biblioteki SAX1 i SAX2 z driverami do wiêkszo¶ci parserów
  - 4DOM: w pe³ni kompatybilna implementacja DOM Level 2
- - javadom: adapter z implementacji DOM w Javie do standardowego DOM
-   w Pythonie
+ - javadom: adapter z implementacji DOM w Javie do standardowego DOM w
+   Pythonie
  - pulldom: implementacja DOM obs³uguj±ca leniwe tworzenie instancji
    wêz³ów
- - marshal: modu³ z ró¿nymi opcjami do serializacji obiektów Pythona
-   w XML, w tym WDDX i XML-RPC
+ - marshal: modu³ z ró¿nymi opcjami do serializacji obiektów Pythona w
+   XML, w tym WDDX i XML-RPC
  - unicode: pomocniczy modu³ dla u¿ytkowników Pythona 1.5, którzy
    potrzebuj± konwersji miêdzy UTF-8 a ISO-8859-?.
- 
+
 %package examples
 Summary:	Examples of Python/XML
 Summary(pl):	Przyk³ady do Python/XML
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
+Group(de):	Entwicklung/Bibliotheken
 Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(pt):	Desenvolvimento/Bibliotecas
 Group(ru):	òÁÚÒÁÂÏÔËÁ/âÉÂÌÉÏÔÅËÉ
 Group(uk):	òÏÚÒÏÂËÁ/â¦ÂÌ¦ÏÔÅËÉ
 %requires_eq	python
