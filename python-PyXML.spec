@@ -6,11 +6,12 @@ Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8
-Release:	1
+Release:	2
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
-Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
+# Source0-md5:	d9407357fb2ef666612847c15cedd6a1
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1.95.4
 BuildRequires:	rpm-pythonprov
