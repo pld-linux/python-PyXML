@@ -10,7 +10,7 @@ Release:	1
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
-Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
+Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1.95.4
 BuildRequires:	rpm-pythonprov
