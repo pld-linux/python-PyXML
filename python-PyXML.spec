@@ -1,11 +1,12 @@
+%include /usr/lib/rpm/macros.python
 
-%define short_name PyXML
+%define module PyXML
 
 Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
-Name:		python-%{short_name}
+Name:		python-%{module}
 Version:	0.6.6
-Release:	1
+Release:	2
 License:	Python
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Development/Libraries
@@ -16,14 +17,12 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Разработка/Библиотеки
 Group(uk):	Розробка/Б╕бл╕отеки
-Source0:	http://prdownloads.sourceforge.net/pyxml/%{short_name}-%{version}.tar.gz
+Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
-%requires_eq	python
-BuildRequires:	python >= 2.0
+BuildRequires:	python >= 2.2
 BuildRequires:	rpm-pythonprov
+%requires_eq	python
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%include /usr/lib/rpm/macros.python
 
 %description
 The PyXML package is a collection of libraries to process XML with
@@ -82,7 +81,7 @@ Examples of Python/XML.
 PrzykЁady do Python/XML.
 
 %prep
-%setup -q -n %{short_name}-%{version}
+%setup -q -n %{module}-%{version}
 
 %build
 CFLAGS="%{rpmcflags}" python setup.py build --with-libexpat=%{_prefix} --ldflags=-lexpat
