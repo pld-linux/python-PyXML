@@ -14,7 +14,7 @@ Source0:	http://prdownloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel
 BuildRequires:	rpm-pythonprov
-%requires_eq	python-modules
+%pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -56,7 +56,7 @@ Zawiera miêdzy innymi:
 Summary:	Examples of Python/XML
 Summary(pl):	Przyk³ady do Python/XML
 Group:		Development/Languages/Python
-%requires_eq	python
+%pyrequires_eq	python
 Requires:	%{name} = %{version}
 
 %description examples
