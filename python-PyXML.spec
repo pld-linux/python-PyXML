@@ -78,7 +78,7 @@ python setup.py build \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 python setup.py install \
 	--root=$RPM_BUILD_ROOT \
@@ -86,7 +86,7 @@ python setup.py install \
 
 find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
 
-cp -a demo $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
+cp -a demo $RPM_BUILD_ROOT%{_examplesdir}/%{name}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
