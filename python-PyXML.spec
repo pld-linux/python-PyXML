@@ -27,7 +27,7 @@ Python. It contains, among other things
   by a factor of 5.
 - PySAX: SAX 1 and SAX2 libraries with drivers for most of the
   parsers.
-- 4DOM: A fully compliant DOM Level 2 implementation
+- 4DOM: A fully compliant DOM Level 2 implementation.
 - javadom: An adapter from Java DOM implementations to the standard
   Python DOM binding.
 - pulldom: a DOM implementation that supports lazy instantiation of
@@ -38,20 +38,22 @@ Python. It contains, among other things
   between UTF-8 and ISO-8859-?.
 
 %description -l pl
-Pakiet PyXML jest zestawem bibliotek do obs³ugi XML z poziomu Pythona.
-Zawiera miêdzy innymi:
-- xmlproc: parser sprawdzaj±cy poprawno¶æ XML
+
+Pakiet PyXML jest zestawem bibliotek do obs³ugi XML-a z poziomu
+Pythona. Zawiera miêdzy innymi:
+- xmlproc: analizator sprawdzaj±cy poprawno¶æ XML-a;
 - sgmlp: pomocniczy modu³ w C przyspieszaj±cy dzia³anie xmllib.py i
-  sgmllib.py piêciokrotnie
-- PySAX: biblioteki SAX1 i SAX2 z driverami do wiêkszo¶ci parserów
-- 4DOM: w pe³ni kompatybilna implementacja DOM Level 2
+  sgmllib.py piêciokrotnie;
+- PySAX: biblioteki SAX1 i SAX2 ze sterownikami do wiêkszo¶ci
+  analizatorów sk³adniowych;
+- 4DOM: w pe³ni kompatybilna implementacja DOM Level 2;
 - javadom: adapter z implementacji DOM w Javie do standardowego DOM w
-  Pythonie
+  Pythonie;
 - pulldom: implementacja DOM obs³uguj±ca leniwe tworzenie instancji
-  wêz³ów
+  wêz³ów;
 - marshal: modu³ z ró¿nymi opcjami do serializacji obiektów Pythona w
-  XML, w tym WDDX i XML-RPC
-- unicode: pomocniczy modu³ dla u¿ytkowników Pythona 1.5, którzy
+  XML-u, w tym WDDX i XML-RPC;
+- unicode: pomocniczy modu³ dla u¿ytkowników Pythona 1.5, którzy;
   potrzebuj± konwersji miêdzy UTF-8 a ISO-8859-?.
 
 %package examples
