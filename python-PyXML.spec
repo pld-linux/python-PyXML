@@ -2,10 +2,10 @@
 %define short_name PyXML
 
 Summary:	Python/XML package
+Summary(pl):	Pakiet Python/XML
 Name:		python-%{short_name}
 Version:	0.6.6
 Release:	1
-Source0:	http://prdownloads.sourceforge.net/pyxml/%{short_name}-%{version}.tar.gz
 License:	Python
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -15,11 +15,13 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
 Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
+Vendor:		XML-SIG <xml-sig@python.org>
+Source0:	http://prdownloads.sourceforge.net/pyxml/%{short_name}-%{version}.tar.gz
+URL:		http://pyxml.sourceforge.net/
 %requires_eq	python
 BuildRequires:	python >= 2.0
+BuildRequires:	rpm-pythonprov
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-Vendor:		XML-SIG <xml-sig@python.org>
-Url:		http://pyxml.sourceforge.net/
 
 %include /usr/lib/rpm/macros.python
 
@@ -42,8 +44,26 @@ Python. It contains, among other things
     - unicode: a helper module for Python 1.5 users who need conversions
       between UTF-8 and ISO-8859-?.
 
+%description -l pl
+Pakiet PyXML jest zestawem bibliotek do obs≥ugi XML z poziomu Pythona.
+Zawiera miÍdzy innymi:
+ - xmlproc: parser sprawdzaj±cy poprawno∂Ê XML
+ - sgmlp: pomocniczy modu≥ w C przyspieszaj±cy dzia≥anie xmllib.py
+   i sgmllib.py piÍciokrotnie
+ - PySAX: biblioteki SAX1 i SAX2 z driverami do wiÍkszo∂ci parserÛw
+ - 4DOM: w pe≥ni kompatybilna implementacja DOM Level 2
+ - javadom: adapter z implementacji DOM w Javie do standardowego DOM
+   w Pythonie
+ - pulldom: implementacja DOM obs≥uguj±ca leniwe tworzenie instancji
+   wÍz≥Ûw
+ - marshal: modu≥ z rÛønymi opcjami do serializacji obiektÛw Pythona
+   w XML, w tym WDDX i XML-RPC
+ - unicode: pomocniczy modu≥ dla uøytkownikÛw Pythona 1.5, ktÛrzy
+   potrzebuj± konwersji miÍdzy UTF-8 a ISO-8859-?.
+ 
 %package examples
-Summary:	examples of Python/XML
+Summary:	Examples of Python/XML
+Summary(pl):	Przyk≥ady do Python/XML
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
 Group(es):	Desarrollo/Bibliotecas
@@ -56,7 +76,10 @@ Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
 Requires:	%{name} = %{version}
 
 %description examples
-examples of Python/XML
+Examples of Python/XML.
+
+%description examples -l pl
+Przyk≥ady do Python/XML.
 
 %prep
 %setup -q -n %{short_name}-%{version}
