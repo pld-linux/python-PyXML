@@ -13,8 +13,8 @@ Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1.95.4
-BuildRequires:	rpm-pythonprov
 BuildRequires:	python >= 2.2.1
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -70,29 +70,29 @@ Przyk³ady do Python/XML.
 %setup -q -n %{module}-%{version}
 
 %build
-CFLAGS="%{rpmcflags}"
-export CLFAGS
-python setup.py build --with-libexpat=%{_prefix} --ldflags=-lexpat
+CFLAGS="%{rpmcflags}"; export CLFAGS
+python setup.py build \
+	--with-libexpat=%{_prefix} \
+	--ldflags=-lexpat
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
 
 python setup.py install \
-	--root=$RPM_BUILD_ROOT --optimize=2
+	--root=$RPM_BUILD_ROOT \
+	--optimize=2
 
 find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
 
 cp -a demo $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
-
-gzip -9fn ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc test
+%doc doc test ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
 %{py_sitedir}/_xmlplus
 %attr(755,root,root) %{_bindir}/*
 
