@@ -5,7 +5,7 @@
 Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
-Version:	0.8
+Version:	0.8.1
 Release:	1
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
@@ -85,16 +85,14 @@ find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
 
 cp -a demo $RPM_BUILD_ROOT/%{_examplesdir}/%{name}
 
-gzip -9fn ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz doc test
-%{py_sitedir}/_xmlplus
+%doc doc test ANNOUNCE CREDITS LICENCE README README.dom README.pyexpat README.sgmlop
 %attr(755,root,root) %{_bindir}/*
+%{py_sitedir}/_xmlplus
 
 %files examples
 %defattr(644,root,root,755)
