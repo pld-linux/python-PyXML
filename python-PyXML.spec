@@ -72,7 +72,7 @@ Przyk³ady do Python/XML.
 
 %build
 CFLAGS="%{rpmcflags}"
-export CLFAGS
+export CFLAGS
 python setup.py build --with-libexpat=%{_prefix} --ldflags=-lexpat
 
 %install
