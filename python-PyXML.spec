@@ -4,13 +4,13 @@
 Summary:	Python/XML package
 Summary(pl):	Pakiet Python/XML
 Name:		python-%{module}
-Version:	0.8.3
+Version:	0.8.4
 Release:	2
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
-# Source0-md5:	7083d950064ce90840d9ed48c818dc85
+# Source0-md5:	1f7655050cebbb664db976405fdba209
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1.95.4
 BuildRequires:	python >= 2.2.1
@@ -37,7 +37,6 @@ Python. It contains, among other things
   between UTF-8 and ISO-8859-?.
 
 %description -l pl
-
 Pakiet PyXML jest zestawem bibliotek do obs³ugi XML-a z poziomu
 Pythona. Zawiera miêdzy innymi:
 - xmlproc: analizator sprawdzaj±cy poprawno¶æ XML-a;
@@ -60,7 +59,7 @@ Summary:	Examples of Python/XML
 Summary(pl):	Przyk³ady do Python/XML
 Group:		Development/Languages/Python
 %pyrequires_eq	python
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description examples
 Examples of Python/XML.
