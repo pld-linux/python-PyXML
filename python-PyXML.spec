@@ -1,5 +1,5 @@
+
 %define short_name PyXML
-%define python_sitepkgsdir %(echo `python -c "import sys; print (sys.prefix + '/lib/python' + sys.version[:3] + '/site-packages/')"`)
 
 Summary:	Python/XML package
 Name:		python-%{short_name}
@@ -19,6 +19,8 @@ BuildRequires:	python >= 2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 Vendor:		XML-SIG <xml-sig@python.org>
 Url:		http://pyxml.sourceforge.net/
+
+%include /usr/lib/rpm/macros.python
 
 %description
 The PyXML package is a collection of libraries to process XML with
@@ -74,7 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {ANNOUNCE,CREDITS,LICENCE,README,README.dom,README.pyexpat,README.sgmlop}.gz doc test
 
-%{python_sitepkgsdir}/_xmlplus
+%{py_sitedir}/_xmlplus
 %attr(755,root,root) %{_bindir}/*
 
 %files examples
