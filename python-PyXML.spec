@@ -13,7 +13,7 @@ Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 # Source0-md5:	1f7655050cebbb664db976405fdba209
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1:1.95.8
-BuildRequires:	python >= 2.2.1
+BuildRequires:	python >= 1:2.5
 %pyrequires_eq	python-modules
 Requires:	expat >= 1:1.95.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -78,7 +78,7 @@ python setup.py build \
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 python setup.py install \
 	--root=$RPM_BUILD_ROOT \
@@ -86,17 +86,18 @@ python setup.py install \
 
 find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
 
-cp -a demo $RPM_BUILD_ROOT%{_examplesdir}/%{name}
+cp -a demo $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc test ANNOUNCE CREDITS LICENCE README README* TODO
+%doc doc test ANNOUNCE CREDITS LICENCE README* TODO
 %attr(755,root,root) %{_bindir}/*
 %{py_sitedir}/_xmlplus
+%{py_sitedir}/PyXML-*.egg-info
 
 %files examples
 %defattr(644,root,root,755)
-%{_examplesdir}/%{name}
+%{_examplesdir}/%{name}-%{version}
