@@ -2,7 +2,7 @@
 %define	module	PyXML
 
 Summary:	Python/XML package
-Summary(pl):	Pakiet Python/XML
+Summary(pl.UTF-8):   Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
 Release:	5
@@ -36,27 +36,27 @@ Python. It contains, among other things
 - unicode: a helper module for Python 1.5 users who need conversions
   between UTF-8 and ISO-8859-?.
 
-%description -l pl
-Pakiet PyXML jest zestawem bibliotek do obs³ugi XML-a z poziomu
-Pythona. Zawiera miêdzy innymi:
-- xmlproc: analizator sprawdzaj±cy poprawno¶æ XML-a;
-- sgmlp: pomocniczy modu³ w C przyspieszaj±cy dzia³anie xmllib.py i
-  sgmllib.py piêciokrotnie;
-- PySAX: biblioteki SAX1 i SAX2 ze sterownikami do wiêkszo¶ci
-  analizatorów sk³adniowych;
-- 4DOM: w pe³ni kompatybilna implementacja DOM Level 2;
+%description -l pl.UTF-8
+Pakiet PyXML jest zestawem bibliotek do obsÅ‚ugi XML-a z poziomu
+Pythona. Zawiera miÄ™dzy innymi:
+- xmlproc: analizator sprawdzajÄ…cy poprawnoÅ›Ä‡ XML-a;
+- sgmlp: pomocniczy moduÅ‚ w C przyspieszajÄ…cy dziaÅ‚anie xmllib.py i
+  sgmllib.py piÄ™ciokrotnie;
+- PySAX: biblioteki SAX1 i SAX2 ze sterownikami do wiÄ™kszoÅ›ci
+  analizatorÃ³w skÅ‚adniowych;
+- 4DOM: w peÅ‚ni kompatybilna implementacja DOM Level 2;
 - javadom: adapter z implementacji DOM w Javie do standardowego DOM w
   Pythonie;
-- pulldom: implementacja DOM obs³uguj±ca leniwe tworzenie instancji
-  wêz³ów;
-- marshal: modu³ z ró¿nymi opcjami do serializacji obiektów Pythona w
+- pulldom: implementacja DOM obsÅ‚ugujÄ…ca leniwe tworzenie instancji
+  wÄ™zÅ‚Ã³w;
+- marshal: moduÅ‚ z rÃ³Å¼nymi opcjami do serializacji obiektÃ³w Pythona w
   XML-u, w tym WDDX i XML-RPC;
-- unicode: pomocniczy modu³ dla u¿ytkowników Pythona 1.5, którzy;
-  potrzebuj± konwersji miêdzy UTF-8 a ISO-8859-?.
+- unicode: pomocniczy moduÅ‚ dla uÅ¼ytkownikÃ³w Pythona 1.5, ktÃ³rzy;
+  potrzebujÄ… konwersji miÄ™dzy UTF-8 a ISO-8859-?.
 
 %package examples
 Summary:	Examples of Python/XML
-Summary(pl):	Przyk³ady do Python/XML
+Summary(pl.UTF-8):   PrzykÅ‚ady do Python/XML
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}-%{release}
@@ -64,8 +64,8 @@ Requires:	%{name} = %{version}-%{release}
 %description examples
 Examples of Python/XML.
 
-%description examples -l pl
-Przyk³ady do Python/XML.
+%description examples -l pl.UTF-8
+PrzykÅ‚ady do Python/XML.
 
 %prep
 %setup -q -n %{module}-%{version}
