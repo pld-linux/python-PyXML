@@ -2,7 +2,7 @@
 %define	module	PyXML
 
 Summary:	Python/XML package
-Summary(pl.UTF-8):   Pakiet Python/XML
+Summary(pl.UTF-8):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
 Release:	5
@@ -56,7 +56,7 @@ Pythona. Zawiera między innymi:
 
 %package examples
 Summary:	Examples of Python/XML
-Summary(pl.UTF-8):   Przykłady do Python/XML
+Summary(pl.UTF-8):	Przykłady do Python/XML
 Group:		Development/Languages/Python
 %pyrequires_eq	python
 Requires:	%{name} = %{version}-%{release}
