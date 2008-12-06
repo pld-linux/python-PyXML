@@ -5,12 +5,13 @@ Summary:	Python/XML package
 Summary(pl.UTF-8):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
-Release:	7
+Release:	8
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 # Source0-md5:	1f7655050cebbb664db976405fdba209
+Patch0:         %{name}-as_is_keyword_in_py26.patch
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1:1.95.8
 BuildRequires:	python >= 1:2.5
@@ -69,6 +70,7 @@ Przykłady do Python/XML.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 CFLAGS="%{rpmcflags}"; export CFLAGS
