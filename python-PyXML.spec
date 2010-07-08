@@ -5,7 +5,7 @@ Summary:	Python/XML package
 Summary(pl.UTF-8):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
-Release:	8
+Release:	9
 License:	BeOpen Python Open Source License
 Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
