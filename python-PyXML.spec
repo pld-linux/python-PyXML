@@ -1,20 +1,18 @@
-
-%define	module	PyXML
-
+%define		module	PyXML
 Summary:	Python/XML package
 Summary(pl.UTF-8):	Pakiet Python/XML
 Name:		python-%{module}
 Version:	0.8.4
-Release:	9
+Release:	10
 License:	BeOpen Python Open Source License
-Vendor:		XML-SIG <xml-sig@python.org>
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
+Source0:	http://downloads.sourceforge.net/pyxml/%{module}-%{version}.tar.gz
 # Source0-md5:	1f7655050cebbb664db976405fdba209
-Patch0:         %{name}-as_is_keyword_in_py26.patch
+Patch0:		%{name}-as_is_keyword_in_py26.patch
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1:1.95.8
 BuildRequires:	python >= 1:2.5
+BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	expat >= 1:1.95.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -73,30 +71,31 @@ Przykłady do Python/XML.
 %patch0 -p1
 
 %build
-CFLAGS="%{rpmcflags}"; export CFLAGS
-python setup.py build \
+CC="%{__cc}" \
+CFLAGS="%{rpmcflags}" \
+%{__python} setup.py build \
 	--with-libexpat=%{_prefix} \
 	--ldflags=-lexpat
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+%{__python} setup.py install \
+	--optimize=2 \
+	--root=$RPM_BUILD_ROOT
 
-python setup.py install \
-	--root=$RPM_BUILD_ROOT \
-	--optimize=2
+%py_postclean
 
-find $RPM_BUILD_ROOT%{py_sitedir} -name \*.py -exec rm {} \;
-
-cp -a demo $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a demo/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc test ANNOUNCE CREDITS LICENCE README* TODO
-%attr(755,root,root) %{_bindir}/*
+%doc doc ANNOUNCE CREDITS LICENCE README* TODO
+%attr(755,root,root) %{_bindir}/xmlproc_parse
+%attr(755,root,root) %{_bindir}/xmlproc_val
 %{py_sitedir}/_xmlplus
 %{py_sitedir}/PyXML-*.egg-info
 
