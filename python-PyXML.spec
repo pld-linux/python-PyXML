@@ -12,6 +12,9 @@ Patch0:		%{name}-as_is_keyword_in_py26.patch
 URL:		http://pyxml.sourceforge.net/
 BuildRequires:	expat-devel >= 1:1.95.8
 BuildRequires:	python >= 1:2.5
+BuildRequires:	python-devel
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 BuildRequires:	rpmbuild(macros) >= 1.219
 %pyrequires_eq	python-modules
 Requires:	expat >= 1:1.95.8
