@@ -99,8 +99,43 @@ rm -rf $RPM_BUILD_ROOT
 %doc doc ANNOUNCE CREDITS LICENCE README* TODO
 %attr(755,root,root) %{_bindir}/xmlproc_parse
 %attr(755,root,root) %{_bindir}/xmlproc_val
-%{py_sitedir}/_xmlplus
-%{py_sitedir}/PyXML-*.egg-info
+%dir %{py_sitedir}/_xmlplus
+%{py_sitedir}/_xmlplus/*.py[co]
+%dir %{py_sitedir}/_xmlplus/dom
+%{py_sitedir}/_xmlplus/dom/*.py[co]
+%dir %{py_sitedir}/_xmlplus/dom/ext
+%{py_sitedir}/_xmlplus/dom/ext/*.py[co]
+%dir %{py_sitedir}/_xmlplus/dom/ext/reader
+%{py_sitedir}/_xmlplus/dom/ext/reader/*.py[co]
+%dir %{py_sitedir}/_xmlplus/dom/html
+%{py_sitedir}/_xmlplus/dom/html/*.py[co]
+%lang(de) %{py_sitedir}/_xmlplus/dom/de
+%lang(en_US) %{py_sitedir}/_xmlplus/dom/en_US
+%lang(fr) %{py_sitedir}/_xmlplus/dom/fr
+%dir %{py_sitedir}/_xmlplus/marshal
+%{py_sitedir}/_xmlplus/marshal/*.py[co]
+%dir %{py_sitedir}/_xmlplus/parsers
+%attr(755,root,root) %{py_sitedir}/_xmlplus/parsers/pyexpat.so
+%attr(755,root,root) %{py_sitedir}/_xmlplus/parsers/sgmlop.so
+%{py_sitedir}/_xmlplus/parsers/*.py[co]
+%dir %{py_sitedir}/_xmlplus/parsers/xmlproc
+%{py_sitedir}/_xmlplus/parsers/xmlproc/*.py[co]
+%dir %{py_sitedir}/_xmlplus/sax
+%{py_sitedir}/_xmlplus/sax/*.py[co]
+%dir %{py_sitedir}/_xmlplus/sax/drivers
+%{py_sitedir}/_xmlplus/sax/drivers/*.py[co]
+%dir %{py_sitedir}/_xmlplus/sax/drivers2
+%{py_sitedir}/_xmlplus/sax/drivers2/*.py[co]
+%dir %{py_sitedir}/_xmlplus/schema
+%{py_sitedir}/_xmlplus/schema/*.py[co]
+%dir %{py_sitedir}/_xmlplus/unicode
+%{py_sitedir}/_xmlplus/unicode/*.py[co]
+%dir %{py_sitedir}/_xmlplus/utils
+%attr(755,root,root) %{py_sitedir}/_xmlplus/utils/boolean.so
+%{py_sitedir}/_xmlplus/utils/*.py[co]
+%dir %{py_sitedir}/_xmlplus/xpath
+%{py_sitedir}/_xmlplus/xpath/*.py[co]
+%{py_sitedir}/PyXML-%{version}-py*.egg-info
 
 %files examples
 %defattr(644,root,root,755)
