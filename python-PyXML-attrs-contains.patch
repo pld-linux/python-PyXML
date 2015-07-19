@@ -1,0 +1,12 @@
+--- PyXML-0.8.4/xml/sax/xmlreader.py.orig	2001-03-22 16:40:12.000000000 +0100
++++ PyXML-0.8.4/xml/sax/xmlreader.py	2015-07-19 18:23:13.400014080 +0200
+@@ -321,6 +321,9 @@
+     def has_key(self, name):
+         return self._attrs.has_key(name)
+ 
++    def __contains__(self, name):
++        return name in self._attrs
++
+     def get(self, name, alternative=None):
+         return self._attrs.get(name, alternative)
+ 
