@@ -76,18 +76,14 @@ Przykłady do Python/XML.
 %patch1 -p1
 
 %build
-CC="%{__cc}" \
-CFLAGS="%{rpmcflags}" \
-%{__python} setup.py build \
+%py_build \
 	--with-libexpat=%{_prefix} \
 	--ldflags=-lexpat
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-%{__python} setup.py install \
-	--optimize=2 \
-	--root=$RPM_BUILD_ROOT
+%py_install
 
 %py_postclean
 
